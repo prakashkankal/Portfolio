@@ -23,7 +23,7 @@ i {
 }
 
 html {
-  /* scroll-behavior: smooth; */
+  scroll-behavior: smooth;
 }
 
 .panel {
