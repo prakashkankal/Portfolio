@@ -333,30 +333,25 @@ display: none;
 }
 
 #content #skills {
-  position: relative;
-  /* border: 2px solid red; */
-  display: flex;
-  flex-direction: row;
+  border: 2px solid red;
   width: 100%;
-  height: 90%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  position: relative;
+  top: -5%;
+ 
 }
 
 #skills .box {
-  width: 45%;
+  width: 20%;
   height: 40%;
-  /* border: 2px solid red; */
-  padding: 20px;
-  /* margin: 20px; */
-  background-color: rgba(255, 255, 255, 0.114);
-  border-radius: 30px;
-
-  background: rgba(255, 255, 255, 0.1); /* Transparent white */
-  border-radius: 16px;
-  backdrop-filter: blur(12px); /* Frosted glass effect */
-  -webkit-backdrop-filter: blur(12px); /* Safari support */
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-  transition: all 0.4s ease-in-out;
+  margin: 10px;
+  display: flex;
+  align-items: end;
+  justify-content: space-evenly;
+  
 }
 
 #skills .box:hover {
@@ -365,32 +360,52 @@ display: none;
   transform: scale(1.05);
 }
 
-#skills .box ul {
-  list-style: none;
-  padding: 0;
-  margin-left: 10%;
+
+#skills #box1{
+  background: url(./assets/html.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 10px;
 }
-#skills .box ul h3 {
-  font-size: 1.5rem;
-  margin-bottom: 5px;
-  text-shadow: 5px 2px 4px rgba(0, 0, 0, 0.522);
-  border-bottom: 2px solid rgba(255, 255, 255, 0.114);
+
+#skills #box2{
+  background: url(./assets/css.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 10px;
 }
-#skills #box1 {
-  position: absolute;
-  top: 30px;
-  left: 30px;
+#skills #box3{
+  background: url(./assets/js.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 10px;
 }
-#skills #box2 {
-  position: absolute;
-  top: 30px;
-  left: 50%;
+#skills #box4{
+  background: url(./assets/java.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 10px;
 }
-#skills #box3 {
-  position: absolute;
-  top: 50%;
-  left: 30%;
+#skills #box5{
+  background: url(./assets/c.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 10px;
 }
+#skills #box6{
+  background: url(./assets/cpp.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 10px;
+}
+
+
 
 #education {
   position: relative;
