@@ -11,14 +11,22 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="style.css" />
+    <noscript>
+      <link rel="stylesheet" href="style.css" />
+    </noscript>
   </head>
-
+  </head>
+  
   <body>
     <div id="panel1" class="panel">
       <div id="rightOverlay"></div>
+      <button id="mode"><i class="ri-sun-fill"></i></button>
       <div id="navbar">
-        <h1 >Praka<span>sh</span></h1>
+        <div id="top">
+          <h1 >Praka<span>sh</span></h1>
+          <div id="menuicon"><i class="ri-menu-line"></i></div>
+        </div>
+        
         <div id="menu">
           <ul>
             <a href="#"><i class="ri-home-6-line" id="home"></i> Home</a>
@@ -27,19 +35,21 @@
             <a href="https://drive.google.com/file/d/1nKghoGIt2XUJBDdx09qOO77N7s2mz9TB/view?usp=drive_link" target="_blank"><i class="ri-file-text-line" id="Resume"></i> Resume</a>
             <a href="#contact-section"><i class="ri-mail-line" id="content"></i>Contact</a>
           </ul>
-          <button id="mode"><i class="ri-sun-fill"></i></button>
+          
         </div>
       </div>
 
       <div id="hero">
-        <h1>Hi I am <span>Prakash</span> kankal</h1>
+        <h1>Hi I am <br><span>Prakash</span> kankal</h1>
         <h3>Web devloper | Learner</h3>
         <p>Turning ideas into impactful digital experiences.</p>
 
         <div id="btn">
           <button id="about" class="btn">About me</button>
-          <a href="#" class="social"><i class="ri-linkedin-box-fill"></i></a>
-          <a href="#" class="social"><i class="ri-github-fill"></i></a>
+          <div id="social">
+            <a href="#" class="social"><i class="ri-linkedin-box-fill"></i></a>
+            <a href="#" class="social"><i class="ri-github-fill"></i></a>
+          </div>
         </div>
       </div>
       <div id="img">
@@ -52,9 +62,9 @@
       <h1>My <span>Resume</span> </h1>
       <div id="content">
         <div id="section">
-          <button id="sec1" class="sec active-tab">BIOGRAPY ----01</button>
-          <button id="sec2" class="sec">SKILLS ----02</button>
-          <button id="sec3" class="sec">EDUCATION ----03</button>
+          <button id="sec1" class="sec active-tab">BIOGRAPY 01</button>
+          <button id="sec2" class="sec">SKILLS 02</button>
+          <button id="sec3" class="sec">EDUCATION 03</button>
         </div>
         <div class="tab-content" id="bio">
           <p>

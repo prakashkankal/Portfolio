@@ -19,7 +19,7 @@ ul,
 li,
 button,
 i {
-  transition: all 2s ease;
+  transition: all 1s ease;
 }
 
 html {
@@ -35,6 +35,7 @@ html {
 #panel1 {
   /* border: 2px solid red; */
   display: flex;
+  flex-direction: column-reverse;
   align-items: center;
   justify-content: space-around;
 }
@@ -42,8 +43,8 @@ html {
 #panel1 #rightOverlay {
   /* border: 2px solid red; */
   position: absolute;
-  width: 35%;
-  height: 100%;
+  width: 100%;
+  height: 50%;
   top: 0px;
   right: 0px;
 
@@ -66,17 +67,35 @@ html {
   box-shadow: 0px 1px 20px 0.01px #1283a226;
   width: 100%;
   height: 10%;
+  /* height: 25%; */
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
   background: linear-gradient(5deg, #001a21 10%, #014457 100%);
   z-index: 10;
 }
 
-#panel1 #navbar #top #menuicon {
-display: none;
+#panel1 #navbar #top {
+  /* border: 2px solid red; */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
+#panel1 #navbar #top #menuicon {
+  color: #fefcfb;
+  font-size: 1.1rem;
+  /* border: 1px solid #fefcfb; */
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
 #panel1 #navbar h1 {
   color: #fefcfb;
   font-size: 2.5rem;
@@ -90,20 +109,25 @@ display: none;
   color: #1282a2;
 }
 #panel1 #navbar #menu {
+  display: none;
   /* border: 2px solid red; */
-  width: 40%;
+  width: 100%;
   height: 100%;
-  display: flex;
+
   align-items: center;
   justify-content: space-between;
 }
-
+#panel1 #navbar #menu ul {
+  display: flex;
+  flex-direction: column;
+}
 #panel1 #navbar #menu ul a {
   margin-left: 40px;
   text-decoration: none;
   font-size: 1rem;
   color: #fefcfb;
   font-weight: 700;
+  line-height: 25px;
   transition: all 0.2s ease;
 }
 #panel1 #navbar #menu ul a:hover {
@@ -111,15 +135,15 @@ display: none;
 }
 #panel1  #mode {
   position: fixed;
-  right: 50px;
-  top: 20px;
+  bottom: 5%;
+  right: 10px;
   width: 50px;
   height: 50px;
   border: none;
   background-color: transparent;
   font-size: 2rem;
   color: #fefcfb;
-  z-index: 11;
+  z-index: 20;
 }
 
 /* navbar end  */
@@ -127,16 +151,20 @@ display: none;
 /* homepage start  */
 #panel1 #hero {
   /* border: 2px solid red; */
-  width: 40%;
-  height: 30%;
+  width: 100%;
+  height: 50%;
   align-items: center;
+  text-align: center;
   color: #fefcfb;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
+  display: flex;
+  /* justify-content: space-evenly; */
+  flex-direction: column;
 }
 
 #panel1 #hero h1 {
-  font-size: 3.5rem;
-  line-height: 90px;
+  font-size: 3rem;
+  line-height: 50px;
 }
 
 #panel1 #hero h1 span {
@@ -148,15 +176,18 @@ display: none;
 }
 
 #panel1 #hero h3 {
-  font-size: 2rem;
+  font-size: 1.9rem;
   line-height: 70px;
 }
 
 #panel1 #hero #btn {
+    /* border: 2px solid red; */
   width: 50%;
-  margin-top: 50px;
+  height: auto;
+  margin-top: 20px;
   height: 50px;
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
 }
@@ -205,13 +236,12 @@ display: none;
   }
 }
 #panel1 #img {
-  position: relative;
-  top: 0px;
+  margin-top: 60px;
   background: url(./assets/profile.png);
   background-size: cover;
   background-position: center;
-  width: 400px;
-  height: 400px;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
   overflow: hidden;
   animation: ToTopanimation 0.3s ease-in 0s 1 normal both;
@@ -237,9 +267,9 @@ display: none;
 
 #panel2 #content {
   position: relative;
-  width: 60%;
-  height: 60%;
-  margin-top: 100px;
+  width: 90%;
+  height: 70%;
+  margin-top: 50px;
   align-items: center;
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.1); /* Transparent white */
@@ -253,7 +283,7 @@ display: none;
 
 #panel2 #content #section {
   margin: auto;
-  width: 60%;
+  width: 90%;
   height: 12%;
   position: relative;
   top: -30px;
@@ -272,14 +302,15 @@ display: none;
   transition: all 0.4s ease-in-out;
 }
 
-#panel2 #content #section .sec {
-  /* border: 2px solid red; */
+#panel2 #content #section .sec{
+  border: 2px solid red;
   width: 30%;
   padding: 10px;
   border-radius: 30px;
   /* background-color: #001f54; */
   border: none;
   font-weight: 700;
+  font-size: 9px;
 }
 
 .active-tab {
@@ -306,8 +337,8 @@ display: none;
 }
 /* Optional for smooth transition of tab-content */
 .tab-content {
-  font-size: 1.1rem;
-  line-height: 30px;
+  font-size: 0.9rem;
+  line-height: 20px;
   padding: 20px;
   animation: fadeIn 0.3s ease-in-out;
 }
@@ -336,14 +367,16 @@ display: none;
   position: relative;
   /* border: 2px solid red; */
   display: flex;
-  flex-direction: row;
+  /* flex-direction: row; */
   width: 100%;
   height: 90%;
+    justify-content: space-evenly;
 }
 
 #skills .box {
-  width: 45%;
-  height: 40%;
+  width: 100%;
+  height: 30%;
+  align-items: center;
   /* border: 2px solid red; */
   padding: 20px;
   /* margin: 20px; */
@@ -376,21 +409,7 @@ display: none;
   text-shadow: 5px 2px 4px rgba(0, 0, 0, 0.522);
   border-bottom: 2px solid rgba(255, 255, 255, 0.114);
 }
-#skills #box1 {
-  position: absolute;
-  top: 30px;
-  left: 30px;
-}
-#skills #box2 {
-  position: absolute;
-  top: 30px;
-  left: 50%;
-}
-#skills #box3 {
-  position: absolute;
-  top: 50%;
-  left: 30%;
-}
+
 
 #education {
   position: relative;

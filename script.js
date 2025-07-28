@@ -103,3 +103,24 @@ modeToggle.addEventListener("click", function toggleDarkMode() {
 });
 
 
+window.addEventListener("DOMContentLoaded", () => {
+  const cssFile = window.innerWidth <= 768 ? "mobile.css" : "style.css";
+
+  const link = document.createElement("link");
+  link.rel = "stylesheet";
+  link.href = cssFile;
+  document.head.appendChild(link);
+});
+
+let menuIcon = document.querySelector("#menuicon");
+let menu = document.querySelector("#menu");
+let navbarDiv = document.querySelector("#navbar");
+menuIcon.addEventListener("click", function toggleMenu() {
+  if (menu.style.display === "block") {
+    menu.style.display = "none";
+    navbarDiv.style.height = "10%";
+  } else {
+    menu.style.display = "block";
+    navbarDiv.style.height = "auto";
+  }
+});
