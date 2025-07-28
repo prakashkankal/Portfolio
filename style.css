@@ -3,10 +3,10 @@
   margin: 0px;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
-  transition: all 0.3s ease;
+  transition: all 0.1s ease;
 }
 /* Apply to elements that change background or text color */
-body,
+/* body,
 .panel,
 #navbar,
 #rightOverlay,
@@ -20,7 +20,7 @@ li,
 button,
 i {
   transition: all 0.2s ease;
-}
+} */
 
 html {
   scroll-behavior: smooth;
