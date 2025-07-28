@@ -26,7 +26,7 @@ sec2.addEventListener("click", function showSkills() {
 sec3.addEventListener("click", function showEducation() {
   bio.style.display = "none";
   skills.style.display = "none";
-  education.style.display = "block";
+  education.style.display = "flex";
   sec3.classList.add("active-tab");
   sec1.classList.remove("active-tab");
   sec2.classList.remove("active-tab");
