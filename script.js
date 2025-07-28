@@ -50,7 +50,10 @@ modeToggle.addEventListener("click", function toggleDarkMode() {
   if (DarkMode === 1) {
     // Switch to LIGHT MODE
     modeToggle.innerHTML = `<i class="ri-moon-fill"></i>`;
-    modeToggle.style.color =`black`;
+    modeToggle.style.color = "black";
+    // Also set icon color directly for reliability
+    const modeIcon = modeToggle.querySelector('i');
+    if (modeIcon) modeIcon.style.color = "black";
 
     panels.forEach((panel) => {
       panel.style.background = "linear-gradient(to left, #7fb2f6ff 5%, #eaf8fb 100%)";
@@ -76,6 +79,10 @@ modeToggle.addEventListener("click", function toggleDarkMode() {
   } else {
     // Switch to DARK MODE
     modeToggle.innerHTML = `<i class="ri-sun-fill"></i>`;
+    modeToggle.style.color = "white";
+    // Also set icon color directly for reliability
+    const modeIcon = modeToggle.querySelector('i');
+    if (modeIcon) modeIcon.style.color = "white";
 
     panels.forEach((panel) => {
       panel.style.background = "linear-gradient(to left, #001921 10%, #003a4a 100%)";
@@ -104,12 +111,12 @@ modeToggle.addEventListener("click", function toggleDarkMode() {
 
 
 window.addEventListener("DOMContentLoaded", () => {
-  const cssFile = window.innerWidth <= 768 ? "mobile.css" : "style.css";
-
-  const link = document.createElement("link");
-  link.rel = "stylesheet";
-  link.href = cssFile;
-  document.head.appendChild(link);
+  if (window.innerWidth <= 768) {
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = "mobile.css";
+    document.head.appendChild(link);
+  }
 });
 
 let menuIcon = document.querySelector("#menuicon");

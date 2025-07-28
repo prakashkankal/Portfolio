@@ -186,6 +186,15 @@ html {
   background-color: #1282a2;
 }
 
+#panel1 #hero #btn #about a{
+  text-decoration: none;
+  color: #fefcfb;
+}
+#panel1 #hero #btn #about a:hover{
+  text-decoration: none;
+  color: #001a21;
+}
+
 #panel1 #hero #btn #about:hover {
   background-color: #fefcfb;
   color: #001a21;
