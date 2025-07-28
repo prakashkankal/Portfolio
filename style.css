@@ -25,6 +25,9 @@ i {
 html {
   scroll-behavior: smooth;
 }
+body{
+  background: linear-gradient(to right, #001921 100%, #003a4a);
+}
 
 .panel {
   background: linear-gradient(to right, #001921 100%, #003a4a);
@@ -624,6 +627,7 @@ display: none;
   align-items: center;
   font-size: 1.2rem;
   box-shadow: 0px -1px 20px 0.01px #1283a226;
+  
 }
 
 #footer #content {
