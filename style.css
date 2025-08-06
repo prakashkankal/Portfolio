@@ -112,7 +112,8 @@ display: none;
 #panel1 #navbar #menu ul a:hover {
   color: #1282a2;
 }
-#panel1  #mode {
+#mode {
+  /* border: 2px solid red; */
   position: fixed;
   right: 50px;
   top: 20px;
